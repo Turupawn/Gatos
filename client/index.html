@@ -31,18 +31,6 @@
   function preload ()
   {
     this.load.setBaseURL('/');
-
-    this.load.image('sky', 'assets/space3.png');
-    this.load.image('logo', 'assets/phaser3-logo.png');
-    this.load.image('red', 'assets/red.png');
-    this.load.image('button', 'assets/button.png');
-    this.load.image('1', 'assets/1.png');
-    this.load.image('2', 'assets/2.png');
-    this.load.image('3', 'assets/3.png');
-    this.load.image('4', 'assets/4.png');
-    this.load.image('5', 'assets/5.png');
-    this.load.image('6', 'assets/6.png');
-    this.load.image('approve', 'assets/approve.png');
     this.load.image('cat', 'assets/cat.png');
     this.load.image('dog', 'assets/dog.png');
   }
@@ -61,11 +49,11 @@
       clickCats()
     })
 
-    my_text = this.add.text(20, 50, "Haz click en tu mascota favorita", { font: "37px Sans", fill: "#000" });
+    my_text = this.add.text(20, 50, "¿Cuál es tu mascota favorita?", { font: "37px Sans", fill: "#000" });
     clicks_dogs = this.add.text(120, 500, "Clicks: 0", { font: "37px Sans", fill: "#000" });
     clicks_cats = this.add.text(520, 500, "Clicks: 0", { font: "37px Sans", fill: "#000" });
-    setDogClicks(2)
-    setCatClicks(4)
+    setDogClicks(0)
+    setCatClicks(0)
   }
 
   function setDogClicks(clicks)

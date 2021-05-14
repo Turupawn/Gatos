@@ -13,17 +13,15 @@ const updateDice = async () => {
 };
 
 const clickDogs = async () => {
-  var random_seed = "1234"
   await contract.methods
-    .dogs()
+    .voteDogs()
     .send({ from: accounts[0], gas: 400000 })
   updateDice()
 }
 
 const clickCats = async () => {
-  var random_seed = "1234"
   await contract.methods
-    .cats()
+    .voteCats()
     .send({ from: accounts[0], gas: 400000 })
   updateDice()
 }
